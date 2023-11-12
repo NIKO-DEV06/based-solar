@@ -18,16 +18,16 @@ const cards = [
     id: 1,
   },
   {
-    url: project2,
-    id: 2,
-  },
-  {
     url: project1,
     id: 3,
   },
   {
     url: project4,
     id: 4,
+  },
+  {
+    url: project2,
+    id: 2,
   },
   {
     url: project5,
@@ -43,7 +43,7 @@ const ProjectsSlider = () => {
   const { state } = useAppContext();
   return (
     <div className="bg-white">
-      <div className="translate-y-[5rem]">
+      <div className="translate-y-[5rem] md:translate-y-[0rem] lg:translate-y-[5rem]">
         <h1 className="text-[1.8rem] tracking-wider lg:text-[2.2rem] xl:text-[2.8rem] font-semibold text-[#5783C3] uppercase text-center mb-[0.5rem]">
           {dictionary[state]?.projects}
         </h1>

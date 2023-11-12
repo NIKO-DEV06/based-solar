@@ -18,14 +18,16 @@ const Header = () => {
     setLangOptionIsOpen(!langOptionIsOpen);
   };
   return (
-    <header className="bg-white fixed w-full shadow-header-shadow flex justify-between items-center z-30 px-[1.2rem] md:px-[5rem] lg:px-[7rem] py-[0.8rem] text-black">
-      <Image
-        src={logo}
-        alt="based-solar-logo"
-        width={160}
-        height={160}
-        priority
-      />
+    <header className="bg-white fixed w-full shadow-header-shadow flex justify-between items-center z-30 px-[1.2rem] md:px-[5rem] lg:px-[7rem] py-[0.8rem] text-black top-0">
+      <Link href={"/"}>
+        <Image
+          src={logo}
+          alt="based-solar-logo"
+          width={160}
+          height={160}
+          priority
+        />
+      </Link>
       <nav className="hidden lg:flex gap-[2rem] xl:gap-[2.5rem] uppercase">
         <Link href={`/`} className="cursor-pointer link-with-underline">
           {dictionary[state]?.homeNav}
@@ -36,7 +38,10 @@ const Header = () => {
         <Link href={`/`} className="cursor-pointer link-with-underline">
           {dictionary[state]?.projectsNav}
         </Link>
-        <Link href={`/`} className="cursor-pointer link-with-underline">
+        <Link
+          href={`/get-a-quote`}
+          className="cursor-pointer link-with-underline"
+        >
           {dictionary[state]?.contactNav}
         </Link>
       </nav>

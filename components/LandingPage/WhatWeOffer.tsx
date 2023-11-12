@@ -37,7 +37,7 @@ const WhatWeOffer = () => {
   return (
     <section className="min-h-screen pb-[4rem] lg:pb-[10rem]">
       <h1 className="text-[1.8rem] lg:text-[2.2rem] xl:text-[2.8rem] font-semibold text-[#5783C3] uppercase text-center mb-[3rem] tracking-wider">
-        What do we offer <br /> to you
+        {dictionary[state]?.whatDoWeOffer} <br /> {dictionary[state]?.toYou}
       </h1>
       <Image
         src={solar3d}

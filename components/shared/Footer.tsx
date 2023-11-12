@@ -10,7 +10,7 @@ import instagram from "@/assets/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1c1b1d] text-white min-h-[80vh] pt-[7rem] pb-[6rem] lg:pb-0">
+    <footer className="bg-[#1c1b1d] text-white min-h-[35rem] pt-[7rem] pb-[6rem] lg:pb-0">
       <div className={`lg:flex lg:flex-col lg:items-center`}>
         <div className="lg:flex lg:gap-[23rem] xl:gap-[32rem]">
           <Image
@@ -18,7 +18,7 @@ const Footer = () => {
             width={190}
             height={190}
             alt="logo"
-            className="mx-auto lg:translate-x[-1.3rem]"
+            className="mx-auto"
           />
 
           <hr className="lg:hidden border-[#6b686e] w-[85%] mx-auto py-[1rem] mt-[1rem]" />
@@ -32,7 +32,10 @@ const Footer = () => {
             <Link className="hover:opacity-50 duration-300" href={"/"}>
               Projects
             </Link>
-            <Link className="hover:opacity-50 duration-300" href={"/"}>
+            <Link
+              className="hover:opacity-50 duration-300"
+              href={"/get-a-quote"}
+            >
               Contact
             </Link>
           </div>
@@ -45,7 +48,21 @@ const Footer = () => {
             </p>
             <p className="opacity-60">Phone: +359 897050732 - EN</p>
             <p className="opacity-60">Phone: +359 877198234 - BG</p>
-            <p className="opacity-60">Mail: contact@basedsolar.com</p>
+            {/* <p className="opacity-60">Mail: contact@basedsolar.com</p> */}
+            <div className="relative w-fit group translate-y-[-0.3rem]">
+              <Link
+                href={"mailto:contact@basedsolar.com"}
+                className="opacity-60 group-hover:opacity-100 duration-300 text-[1.1rem]"
+              >
+                contact@basedsolar.com
+                <div
+                  className={`scale-x-0 absolute w-full h-[1px] bg-white bottom-0 group-hover:scale-x-100 duration-300`}
+                ></div>
+              </Link>
+              <div
+                className={`absolute w-full h-[1px] bg-white opacity-[0.4] bottom-0 scale-x-100 duration-300`}
+              ></div>
+            </div>
           </div>
           <div className="lg:translate-y-[3rem]">
             <div className="flex justify-center lg:justify-end gap-[1.5rem]">
@@ -82,9 +99,15 @@ const Footer = () => {
             </p>
             <Link
               href={"/"}
-              className="text-center translate-y-[2.5rem] opacity-60 block lg:text-left"
+              className="text-center translate-y-[2.5rem] opacity-60 block lg:text-left hover:opacity-100 duration-200"
             >
               Privay Policy
+            </Link>
+            <Link
+              href={"https://emmanuelayeniko.netlify.app"}
+              className="text-center translate-y-[2.8rem] text-[0.9rem] opacity-60 block lg:text-left hover:opacity-100 duration-200"
+            >
+              Powered by @NIKO-DEV
             </Link>
           </div>
         </div>

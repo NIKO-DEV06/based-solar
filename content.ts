@@ -13,7 +13,7 @@ export const dictionary: any = {
     getAQuote: "Get a Quote",
     aboutUs: "About Us",
     aboutUsParagraph:
-      " Welcome to Based Solar: Your Gateway to Clean, Cost-Efficient Energy Solutions.Our green power services at Based Solar offer clean, sustainable energy solutions for businesses and homeowners. We provide state-of-the-art photovoltaic systems, energy efficiency, and a greener future, all while reducing costs and environmental impact. Empower your future with our premier photovoltaic systems.",
+      "Welcome to Based Solar: Your Gateway to Clean, Cost-Efficient Energy Solutions.Our green power services at Based Solar offer clean, sustainable energy solutions for businesses and homeowners. We provide state-of-the-art photovoltaic systems, energy efficiency, and a greener future, all while reducing costs and environmental impact. Empower your future with our premier photovoltaic systems.",
     letsGoSolar: "Let's go solar today!",
     reducedBill: "Reduced bills by up to 70%",
     reducedBillP:
