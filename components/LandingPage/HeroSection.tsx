@@ -4,6 +4,7 @@ import Image from "next/image";
 import right from "@/assets/right.svg";
 import { useAppContext } from "@/context/AppContext";
 import { dictionary } from "@/content";
+import Link from "next/link";
 
 const HeroSection = () => {
   const { state } = useAppContext();
@@ -24,7 +25,10 @@ const HeroSection = () => {
           <p className="opacity-70 w-[90%] xl:text-[1.1rem] xl:w-[80%]">
             {dictionary[state]?.heroP}
           </p>
-          <button className="flex group bg-[#5783C3] hover:bg-[#366cbc] duration-200 items-center px-[1.5rem] py-[1rem] gap-[1rem] rounded-full w-fit text-white font-semibold mt-[0.5rem]">
+          <Link
+            href={"/get-a-quote"}
+            className="flex group bg-[#5783C3] hover:bg-[#366cbc] duration-200 items-center px-[1.5rem] py-[1rem] gap-[1rem] rounded-full w-fit text-white font-semibold mt-[0.5rem]"
+          >
             <p> {dictionary[state]?.getAQuote}</p>
             <Image
               src={right}
@@ -33,7 +37,7 @@ const HeroSection = () => {
               alt="rigth-arrow"
               className=" md:group-hover:translate-x-[0.3rem] transition-transform duration-200"
             />
-          </button>
+          </Link>
         </div>
         <video
           src="/animation.mp4"

@@ -23,13 +23,16 @@ const Footer = () => {
 
           <hr className="lg:hidden border-[#6b686e] w-[85%] mx-auto py-[1rem] mt-[1rem]" />
           <div className="flex flex-col lg:flex-row gap-[1.2rem] lg:gap-[1rem] items-center font-[400] uppercase tracking-widest text-[0.95rem] lg:text-[0.85rem] xl:text-[0.95rem]">
-            <Link className="hover:opacity-50 duration-300" href={"/"}>
+            <Link className="hover:opacity-50 duration-300" href={"/for-homes"}>
               For homes
             </Link>
-            <Link className="hover:opacity-50 duration-300" href={"/"}>
+            <Link
+              className="hover:opacity-50 duration-300"
+              href={"/for-busniess"}
+            >
               For Busniess
             </Link>
-            <Link className="hover:opacity-50 duration-300" href={"/"}>
+            <Link className="hover:opacity-50 duration-300" href={"/projects"}>
               Projects
             </Link>
             <Link
@@ -46,9 +49,18 @@ const Footer = () => {
             <p className="font-[600] text-[1.1rem] ">
               Contact Us (Bulgaria, Sofia)
             </p>
-            <p className="opacity-60">Phone: +359 897050732 - EN</p>
-            <p className="opacity-60">Phone: +359 877198234 - BG</p>
-            {/* <p className="opacity-60">Mail: contact@basedsolar.com</p> */}
+            <Link
+              href={"tel:+359897050732"}
+              className="opacity-60 hover:opacity-100"
+            >
+              Phone: +359 897050732 - EN
+            </Link>
+            <Link
+              href={"tel:+359877198234"}
+              className="opacity-60 hover:opacity-100"
+            >
+              Phone: +359 877198234 - BG
+            </Link>
             <div className="relative w-fit group translate-y-[-0.3rem]">
               <Link
                 href={"mailto:contact@basedsolar.com"}
@@ -66,7 +78,7 @@ const Footer = () => {
           </div>
           <div className="lg:translate-y-[3rem]">
             <div className="flex justify-center lg:justify-end gap-[1.5rem]">
-              <Link href={""}>
+              <Link href={"/"}>
                 <Image
                   alt="facebook"
                   src={facebook}
@@ -75,7 +87,7 @@ const Footer = () => {
                   className="hover:opacity-60 duration-300 hover:scale-[1.2]"
                 />
               </Link>
-              <Link href={""}>
+              <Link href={"/"}>
                 <Image
                   alt="linkedin"
                   src={linkedin}
@@ -84,7 +96,7 @@ const Footer = () => {
                   className="hover:opacity-60 duration-300 hover:scale-[1.2]"
                 />
               </Link>
-              <Link href={""}>
+              <Link href={"/"}>
                 <Image
                   alt="instagram"
                   src={instagram}
@@ -98,7 +110,7 @@ const Footer = () => {
               © 2023 Based Solar. All Rights Reserved
             </p>
             <Link
-              href={"/"}
+              href={"/privacy-policy"}
               className="text-center translate-y-[2.5rem] opacity-60 block lg:text-left hover:opacity-100 duration-200"
             >
               Privay Policy

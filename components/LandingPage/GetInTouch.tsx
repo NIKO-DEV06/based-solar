@@ -4,6 +4,7 @@ import Image from "next/image";
 import right from "@/assets/right.svg";
 import { useAppContext } from "@/context/AppContext";
 import { dictionary } from "@/content";
+import Link from "next/link";
 
 const GetInTouch = () => {
   const { state } = useAppContext();
@@ -21,7 +22,10 @@ const GetInTouch = () => {
               {dictionary[state]?.getInTouchP}
             </p>
           </div>
-          <button className="flex group bg-[#5783C3] hover:bg-[#366cbc] duration-200 items-center px-[1.5rem] py-[1rem] h-fit gap-[1rem] rounded-full w-fit text-white font-semibold mt-[2rem] mx-auto lg:mx-0 lg:mt-0">
+          <Link
+            href={"/get-a-quote"}
+            className="flex group bg-[#5783C3] hover:bg-[#366cbc] duration-200 items-center px-[1.5rem] py-[1rem] h-fit gap-[1rem] rounded-full w-fit text-white font-semibold mt-[2rem] mx-auto lg:mx-0 lg:mt-0"
+          >
             <p className="text-[0.9rem] xl:text-[1rem]">
               {" "}
               {dictionary[state]?.getAQuote}
@@ -33,7 +37,7 @@ const GetInTouch = () => {
               alt="rigth-arrow"
               className=" md:group-hover:translate-x-[0.3rem] transition-transform duration-200"
             />
-          </button>
+          </Link>
         </div>
       </aside>
     </section>
