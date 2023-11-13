@@ -47,8 +47,11 @@ const ProjectsSlider = () => {
         <h1 className="text-[1.8rem] tracking-wider lg:text-[2.2rem] xl:text-[2.8rem] font-semibold text-[#5783C3] uppercase text-center mb-[0.5rem]">
           {dictionary[state]?.projects}
         </h1>
-        <p className="text-[1.2rem] lg:text-[1.5rem] text-center opacity-60">
+        <p className="text-[1.2rem] lg:text-[1.5rem] text-center opacity-80">
           {dictionary[state]?.projectsP}
+        </p>
+        <p className="text-center opacity-60">
+          {`(${dictionary[state]?.keepScrolling})`}
         </p>
       </div>
       <HorizontalScrollCarousel />
@@ -95,7 +98,7 @@ const Card = ({ card }: { card: any }) => {
       />
       <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 duration-200"></div>
       <Link
-        href={"/"}
+        href={"/projects"}
         className="absolute text-[#ffffff] bottom-1/2 translate-y-1/2 right-1/2 translate-x-1/2 tracking-wider fontsemibold text-center mx-auto uppercase w-fit border-2 border-white py-[0.5rem] px-[1rem] hover:bg-white hover:text-black duration-200 opacity-0 group-hover:opacity-100"
       >
         {dictionary[state]?.viewProjects}

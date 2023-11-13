@@ -16,9 +16,6 @@ const Header = () => {
   const [langOptionIsOpen, setLangOptionIsOpen] = useState(false);
   const { state, setState } = useAppContext();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   const toggleLangOption = () => {
     setLangOptionIsOpen(!langOptionIsOpen);
   };

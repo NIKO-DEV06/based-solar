@@ -1,14 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.jpg";
-import phone from "@/assets/phone.svg";
-import location from "@/assets/location.svg";
-import mail from "@/assets/mail.svg";
 import facebook from "@/assets/facebook.svg";
 import linkedin from "@/assets/linkedin.svg";
 import instagram from "@/assets/instagram.svg";
+import { useAppContext } from "@/context/AppContext";
+import { dictionary } from "@/content";
 
 const Footer = () => {
+  const { state } = useAppContext();
   return (
     <footer className="bg-[#1c1b1d] text-white min-h-[35rem] pt-[7rem] pb-[6rem] lg:pb-0">
       <div className={`lg:flex lg:flex-col lg:items-center`}>
@@ -24,22 +26,22 @@ const Footer = () => {
           <hr className="lg:hidden border-[#6b686e] w-[85%] mx-auto py-[1rem] mt-[1rem]" />
           <div className="flex flex-col lg:flex-row gap-[1.2rem] lg:gap-[1rem] items-center font-[400] uppercase tracking-widest text-[0.95rem] lg:text-[0.85rem] xl:text-[0.95rem]">
             <Link className="hover:opacity-50 duration-300" href={"/for-homes"}>
-              For homes
+              {dictionary[state]?.homeNav}
             </Link>
             <Link
               className="hover:opacity-50 duration-300"
               href={"/for-busniess"}
             >
-              For Busniess
+              {dictionary[state]?.businessNav}
             </Link>
             <Link className="hover:opacity-50 duration-300" href={"/projects"}>
-              Projects
+              {dictionary[state]?.projectsNav}
             </Link>
             <Link
               className="hover:opacity-50 duration-300"
               href={"/get-a-quote"}
             >
-              Contact
+              {dictionary[state]?.contactNav}
             </Link>
           </div>
         </div>
@@ -47,19 +49,19 @@ const Footer = () => {
         <div className="lg:flex lg:gap-[23rem] xl:gap-[32rem]">
           <div className="py-[2rem] mx-auto flex flex-col gap-[1rem] items-center lg:items-start text-[0.95rem]">
             <p className="font-[600] text-[1.1rem] ">
-              Contact Us (Bulgaria, Sofia)
+              {dictionary[state]?.contactUs}
             </p>
             <Link
               href={"tel:+359897050732"}
               className="opacity-60 hover:opacity-100"
             >
-              Phone: +359 897050732 - EN
+              {`${dictionary[state]?.phone}: +359 897050732 - EN`}
             </Link>
             <Link
               href={"tel:+359877198234"}
               className="opacity-60 hover:opacity-100"
             >
-              Phone: +359 877198234 - BG
+              {`${dictionary[state]?.phone}: +359 877198234 - BG`}
             </Link>
             <div className="relative w-fit group translate-y-[-0.3rem]">
               <Link
@@ -107,19 +109,19 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-center translate-y-[2rem] text-[0.9rem]">
-              © 2023 Based Solar. All Rights Reserved
+              {`© ${dictionary[state]?.rights}`}
             </p>
             <Link
               href={"/privacy-policy"}
               className="text-center translate-y-[2.5rem] opacity-60 block lg:text-left hover:opacity-100 duration-200"
             >
-              Privay Policy
+              {dictionary[state]?.privacyPolicy}
             </Link>
             <Link
               href={"https://emmanuelayeniko.netlify.app"}
               className="text-center translate-y-[2.8rem] text-[0.9rem] opacity-60 block lg:text-left hover:opacity-100 duration-200"
             >
-              Powered by @NIKO-DEV
+              {`${dictionary[state]?.poweredBy} @NIKO-DEV`}
             </Link>
           </div>
         </div>

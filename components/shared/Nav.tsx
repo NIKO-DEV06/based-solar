@@ -6,30 +6,33 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import right from "@/assets/right.svg";
 import { useRouter } from "next/navigation";
+import { useAppContext } from "@/context/AppContext";
+import { dictionary } from "@/content";
 
 const Nav = ({
   setIsOpen,
 }: {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const { state } = useAppContext();
   const pathname = usePathname();
   const router = useRouter();
 
   const links = [
     {
-      name: "Welcome",
+      name: dictionary[state]?.welcome,
       url: "/",
     },
     {
-      name: "For Homes",
+      name: dictionary[state]?.homeNav,
       url: "/for-homes",
     },
     {
-      name: "For Business",
+      name: dictionary[state]?.businessNav,
       url: "/for-business",
     },
     {
-      name: "Projects",
+      name: dictionary[state]?.projectsNav,
       url: "/projects",
     },
   ];
@@ -54,7 +57,9 @@ const Nav = ({
         className={`flex group bg-[#5783C3] hover:bg-[#366cbc] duration-200 items-center px-[2rem] py-[1rem] h-fit gap-[1rem] rounded-full w-fit text-white font-semibold mt-[2rem]`}
         onClick={() => setIsOpen(false)}
       >
-        <p className="text-[1.2rem] lg:text-[1.5rem]">Get a Quote</p>
+        <p className="text-[1.2rem] lg:text-[1.5rem]">
+          {dictionary[state]?.getAQuote}
+        </p>
         <Image
           src={right}
           width={25}

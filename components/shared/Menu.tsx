@@ -1,9 +1,14 @@
+"use client";
+
 import { Dispatch, SetStateAction } from "react";
 import Nav from "./Nav";
 import Image from "next/image";
 import Link from "next/link";
 import { BgReveal, MenuReveal } from "@/components/utils/MenuReveal";
 import menuClose from "@/assets/menu-close.svg";
+import logo from "@/assets/logo.jpg";
+import { useAppContext } from "@/context/AppContext";
+import { dictionary } from "@/content";
 
 const Menu = ({
   isOpen,
@@ -12,13 +17,19 @@ const Menu = ({
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const { state } = useAppContext();
+
   return (
     <>
       <MenuReveal isOpen={isOpen}>
         <div className="fixed bg-white z-[30] w-screen md:w-[689px] md:right-0 h-screen overflow-scroll">
-          <p className="font-sofia-bold text-[1.5rem] mt-[1.5rem] md:hidden">
-            Based Solar
-          </p>
+          <Image
+            src={logo}
+            width={120}
+            height={120}
+            alt="logo"
+            className="md:hidden translate-y-[1.1rem]"
+          />
           <Image
             src={menuClose}
             alt="menu"
@@ -27,23 +38,20 @@ const Menu = ({
             className="cursor-pointer absolute right-[4rem] translate-y-[-2rem] md:translate-y-0 md:top-[2rem]"
             onClick={() => setIsOpen(false)}
           />
-          <div className="flex mt-[8rem] md:mt-[7rem] md:pl-[9rem] md:gap-[8rem]">
+          <div className="flex mt-[6rem] md:mt-[7rem] md:pl-[9rem] md:gap-[8rem]">
             <div className="flex flex-col gap-[1rem] pl-[1rem] md:pl-0">
-              <p className="font-sofia-extralight opacity-50 text-[1.2rem] md:text-base uppercase tracking-widest">
-                Menu
+              <p className="opacity-50 text-[1.2rem] md:text-base uppercase tracking-widest">
+                {dictionary[state]?.menu}
               </p>
               <Nav setIsOpen={setIsOpen} />
             </div>
           </div>
           <div className="pt-[3rem] md:pt-[2rem] pl-[1.5rem] md:pl-[9rem]">
-            <p className="font-sofia-extralight opacity-50 uppercase tracking-wider md:text-[0.9rem]">
-              Get In Touch
+            <p className="opacity-50 uppercase tracking-wider md:text-[0.9rem]">
+              {dictionary[state]?.getInTouchText}
             </p>
             <div className="relative w-fit group">
-              <Link
-                href={"mailto:contact@basedsolar.com"}
-                className=" font-sofia-extralight"
-              >
+              <Link href={"mailto:contact@basedsolar.com"}>
                 contact@basedsolar.com
                 <div
                   className={`scale-x-0 absolute w-full h-[1px] bg-black bottom-0 group-hover:scale-x-100 duration-300`}

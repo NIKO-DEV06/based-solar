@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -8,9 +9,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import toast, { Toaster } from "react-hot-toast";
 import right from "@/assets/right.svg";
+import { useAppContext } from "@/context/AppContext";
+import { dictionary } from "@/content";
 
 const GetAQuote = () => {
   const [isSending, setIsSending] = useState(false);
+  const { state } = useAppContext();
 
   const schema = yup.object().shape({
     name: yup.string().trim().required("Please enter your name"),
@@ -52,8 +56,11 @@ const GetAQuote = () => {
       <section className="min-h-screen bg-white text-black pb-[8rem] pt-[5rem] md:pt-[3rem] lg:pt-[4rem]">
         {/* <Reveal y={100} z="z-[10]"> */}
         <h1 className="mt-[4.5rem] md:mt-[7rem] mb-[2rem] md:mb-[5rem] text-[2rem] md:text-[2.8rem] md:leading-[4.5rem] lg:text-[4rem] lg:leading-[4.8rem] px-[1.2rem] md:px-[5rem] lg:px-[7rem] leading-[3.3rem]">
-          Let us know more about <br /> your
-          <span className="text-[#5783C3]"> solar plan</span>{" "}
+          {dictionary[state]?.letUsKnow} <br /> {dictionary[state]?.your}
+          <span className="text-[#5783C3]">
+            {" "}
+            {dictionary[state]?.solarPlan}
+          </span>{" "}
           <motion.span
             animate={{ rotate: [0, 10, -8, 0] }}
             transition={{
@@ -81,7 +88,7 @@ const GetAQuote = () => {
               {...register("name")}
               name="name"
               autoComplete="off"
-              placeholder="Your name"
+              placeholder={dictionary[state]?.yourName}
               className={`border-b-[0.9px] md:border-b-[1.5px] ${
                 errors.name
                   ? "border-b-[#ff0000] focus:border-b-[#ff0000]"
@@ -100,7 +107,7 @@ const GetAQuote = () => {
               {...register("email")}
               name="email"
               autoComplete="off"
-              placeholder="Your email"
+              placeholder={dictionary[state]?.yourEmail}
               className={`border-b-[0.9px] md:border-b-[1.5px] ${
                 errors.email
                   ? "border-b-[#ff0000] focus:border-b-[#ff0000]"
@@ -119,7 +126,7 @@ const GetAQuote = () => {
               {...register("message")}
               name="message"
               autoComplete="off"
-              placeholder="Tell us about your project"
+              placeholder={dictionary[state]?.yourProject}
               className={`border-b-[0.9px] md:border-b-[1.5px] ${
                 errors.message
                   ? "border-b-[#ff0000] focus:border-b-[#ff0000]"
@@ -139,7 +146,9 @@ const GetAQuote = () => {
             }`}
           >
             <p className="text-[1.2rem] lg:text-[1.5rem]">
-              {isSending ? "Sending..." : "Submit"}
+              {isSending
+                ? dictionary[state]?.sending
+                : dictionary[state]?.submit}
             </p>
             <Image
               src={right}
