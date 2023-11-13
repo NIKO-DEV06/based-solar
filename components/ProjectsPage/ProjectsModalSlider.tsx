@@ -1,8 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 const ExampleWrapper = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +18,13 @@ const ExampleWrapper = () => {
   );
 };
 
-const SpringModal = ({ isOpen, setIsOpen }) => {
+const SpringModal = ({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
     <AnimatePresence>
       {isOpen && (
