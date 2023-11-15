@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import { ThemeProvider } from "@/MT";
 
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import { AppProvider } from "@/context/AppContext";
+
 import Footer from "@/components/shared/Footer";
 
 const nunito_sans = Nunito_Sans({ subsets: ["latin"] });
@@ -22,15 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang ?? "en"}>
-      <AppProvider>
-        <body>
-          <Header />
-          <main className={`${nunito_sans.className} scroll-smooth`}>
-            {children}
-          </main>
-          <Footer />
-        </body>
-      </AppProvider>
+      <ThemeProvider>
+        <AppProvider>
+          <body>
+            <Header />
+            <main className={`${nunito_sans.className} scroll-smooth`}>
+              {children}
+            </main>
+            <Footer />
+          </body>
+        </AppProvider>
+      </ThemeProvider>
     </html>
   );
 }

@@ -43,7 +43,7 @@ const HeroSection = () => {
           src="/animation.mp4"
           autoPlay
           playsInline
-          className="w-[30rem]"
+          className="w-[30rem] mt-[3rem] lg:mt-0"
         ></video>
       </div>
     </section>
