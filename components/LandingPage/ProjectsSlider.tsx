@@ -50,7 +50,7 @@ const ProjectsSlider = () => {
         <p className="text-[1.2rem] lg:text-[1.5rem] text-center opacity-80">
           {dictionary[state]?.projectsP}
         </p>
-        <p className="text-center opacity-60">
+        <p className="text-center opacity-60 text-[0.9rem]">
           {`(${dictionary[state]?.keepScrolling})`}
         </p>
       </div>

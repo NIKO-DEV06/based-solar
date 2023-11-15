@@ -64,6 +64,7 @@ export const dictionary: any = {
     yourProject: "Tell us about your project",
     submit: "Submit",
     sending: "Sending...",
+    openSlider: "Click image to open slider",
   },
   bg: {
     homeNav: "за домове",
