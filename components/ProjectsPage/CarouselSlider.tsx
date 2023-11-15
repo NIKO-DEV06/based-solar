@@ -31,6 +31,7 @@ export default function CarouselSlider({
     <Carousel className="rounded-xl relative z-10">
       {orderedImgs.map((img) => (
         <Image
+          key={img.id}
           src={img.url}
           width={200}
           height={200}

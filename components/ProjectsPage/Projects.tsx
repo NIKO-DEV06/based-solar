@@ -23,7 +23,7 @@ const Projects = () => {
       </h1>
       <div className="flex flex-wrap gap-[2rem] justify-center">
         {imgs.map((img) => (
-          <div className="overflow-hidden group">
+          <div key={img.id} className="overflow-hidden group">
             <Image
               src={img.url}
               width={300}
