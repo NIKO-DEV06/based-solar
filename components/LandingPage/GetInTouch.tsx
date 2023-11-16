@@ -6,14 +6,15 @@ import { useAppContext } from "@/context/AppContext";
 import { dictionary } from "@/content";
 import Link from "next/link";
 
-const GetInTouch = () => {
+const GetInTouch = (url: { url: any }) => {
   const { state } = useAppContext();
+
   return (
     <section className="mb-[9rem]">
       <aside
         style={{
           position: "relative",
-          backgroundImage: "url(/bgcta.png)",
+          backgroundImage: `url(${url.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

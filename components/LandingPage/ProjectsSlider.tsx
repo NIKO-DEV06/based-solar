@@ -81,7 +81,7 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }: { card: any }) => {
-  const { state, setState } = useAppContext();
+  const { state } = useAppContext();
   return (
     <div
       key={card.id}

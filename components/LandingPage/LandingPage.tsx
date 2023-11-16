@@ -12,7 +12,7 @@ const LandingPage = () => {
       <AboutUs />
       <WhatWeOffer />
       <ProjectsSlider />
-      <GetInTouch />
+      <GetInTouch url="/bgcta.png" />
     </section>
   );
 };

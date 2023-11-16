@@ -47,8 +47,11 @@ const WhatWeOffer = () => {
         className="mx-auto"
       />
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-[2rem] lg:gap-[3rem] pt-[5rem] lg:translate-x-[2rem]">
-        {offers.map((offer) => (
-          <div className="flex flex-col gap-[0.2rem] transition-transform lg:hover:translate-y-[-1rem] duration-300">
+        {offers.map((offer, i) => (
+          <div
+            key={i}
+            className="flex flex-col gap-[0.2rem] transition-transform lg:hover:translate-y-[-1rem] duration-300"
+          >
             <Image src={offersvg} width={40} height={40} alt="offer-svg" />
             <h3 className="text-[1.1rem] lg:text-[1.3rem] font-semibold">
               {offer.title}
