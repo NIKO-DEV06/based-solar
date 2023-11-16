@@ -10,7 +10,7 @@ const HeroSection = () => {
   const { state } = useAppContext();
   return (
     <section className="bg-white min-h-screen pt-[10rem] lg:pt-[11rem]">
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
+      <div className="flex flex-col gap-[1rem] lg:flex-row justify-center items-center lg:justify-between">
         <div className="flex flex-col gap-[1rem]">
           <h3 className="text-[1.1rem] tracking-wider opacity-70 uppercase">
             {dictionary[state]?.heroExperience}
@@ -43,7 +43,9 @@ const HeroSection = () => {
           src="/animation.mp4"
           autoPlay
           playsInline
-          className="w-[30rem] mt-[3rem] lg:mt-0"
+          loop
+          muted
+          className="w-[30rem] mt-[2rem] lg:mt-0 lg:scale-[1.1]"
         ></video>
       </div>
     </section>

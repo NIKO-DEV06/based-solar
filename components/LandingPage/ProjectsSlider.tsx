@@ -89,9 +89,10 @@ const Card = ({ card }: { card: any }) => {
     >
       <Image
         src={card.url}
-        width={200}
-        height={200}
+        width={1000}
+        height={1000}
         alt=""
+        loading="lazy"
         className={`w-full ${
           card.id === 2 ? "h-full" : ""
         } absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110`}

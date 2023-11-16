@@ -35,10 +35,11 @@ const Projects = () => {
           >
             <Image
               src={img.url}
-              width={300}
-              height={300}
+              width={1000}
+              height={1000}
               alt="project-img"
               className="w-[380px] h-[380px] object-cover object-top cursor-pointer group-hover:scale-110 duration-300"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-black opacity-0 lg:group-hover:opacity-60 duration-200"></div>
             <Image

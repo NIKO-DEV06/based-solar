@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useAppContext } from "@/context/AppContext";
 import logo from "../../assets/logo.jpg";
 import menuOpen from "../../assets/menu-open.svg";
@@ -15,10 +16,26 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [langOptionIsOpen, setLangOptionIsOpen] = useState(false);
   const { state, setState } = useAppContext();
+  const pathname = usePathname();
 
   const toggleLangOption = () => {
     setLangOptionIsOpen(!langOptionIsOpen);
   };
+  const links = [
+    {
+      name: dictionary[state]?.homeNav,
+      url: "/for-homes",
+    },
+    {
+      name: dictionary[state]?.businessNav,
+      url: "/for-business",
+    },
+    {
+      name: dictionary[state]?.projectsNav,
+      url: "/projects",
+    },
+    { name: dictionary[state]?.contactNav, url: "/get-a-quote" },
+  ];
   return (
     <>
       <header className="bg-white fixed w-full shadow-header-shadow flex justify-between items-center z-30 px-[1.2rem] md:px-[5rem] lg:px-[7rem] py-[0.8rem] text-black top-0">
@@ -26,36 +43,24 @@ const Header = () => {
           <Image
             src={logo}
             alt="based-solar-logo"
-            width={160}
-            height={160}
+            width={1000}
+            height={1000}
             priority
+            className="w-[160px]"
           />
         </Link>
         <nav className="hidden lg:flex gap-[2rem] xl:gap-[2.5rem] uppercase">
-          <Link
-            href={`/for-homes`}
-            className="cursor-pointer link-with-underline"
-          >
-            {dictionary[state]?.homeNav}
-          </Link>
-          <Link
-            href={`/for-business`}
-            className="cursor-pointer link-with-underline"
-          >
-            {dictionary[state]?.businessNav}
-          </Link>
-          <Link
-            href={`/projects`}
-            className="cursor-pointer link-with-underline"
-          >
-            {dictionary[state]?.projectsNav}
-          </Link>
-          <Link
-            href={`/get-a-quote`}
-            className="cursor-pointer link-with-underline"
-          >
-            {dictionary[state]?.contactNav}
-          </Link>
+          {links.map((link, i) => (
+            <Link
+              key={i}
+              href={link.url}
+              className={`cursor-pointer link-with-underline ${
+                pathname === link.url ? "active-link" : ""
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
         </nav>
         <div className="flex gap-[1rem]">
           <div

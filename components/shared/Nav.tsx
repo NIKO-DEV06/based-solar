@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import right from "@/assets/right.svg";
-import { useRouter } from "next/navigation";
 import { useAppContext } from "@/context/AppContext";
 import { dictionary } from "@/content";
 
@@ -16,7 +15,6 @@ const Nav = ({
 }) => {
   const { state } = useAppContext();
   const pathname = usePathname();
-  const router = useRouter();
 
   const links = [
     {

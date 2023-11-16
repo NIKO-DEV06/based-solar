@@ -33,10 +33,11 @@ export default function CarouselSlider({
         <Image
           key={img.id}
           src={img.url}
-          width={200}
-          height={200}
+          width={1000}
+          height={1000}
           alt="projects-imgs"
           className="h-full w-full object-cover"
+          loading="lazy"
         />
       ))}
     </Carousel>
