@@ -49,7 +49,7 @@ const Header = () => {
             className="w-[160px]"
           />
         </Link>
-        <nav className="hidden lg:flex gap-[2rem] xl:gap-[2.5rem] uppercase">
+        <nav className="hidden lg:flex gap-[2rem] lg:gap-[1.5rem] lg:text-[0.9rem] xl:text-base xl:gap-[2.5rem] uppercase">
           {links.map((link, i) => (
             <Link
               key={i}
