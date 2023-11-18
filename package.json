@@ -20,7 +20,7 @@
     "@mui/types": "^7.2.9",
     "framer-motion": "^10.16.4",
     "negotiator": "^0.6.3",
-    "next": "14.0.1",
+    "next": "^14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.48.2",
