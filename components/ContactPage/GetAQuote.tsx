@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import * as yup from "yup";
 import toast, { Toaster } from "react-hot-toast";
 import right from "@/assets/right.svg";
@@ -34,12 +34,12 @@ const GetAQuote = () => {
   const submitFormHandler = async (data: any) => {
     setIsSending(true);
     try {
-      //   const response = await emailjs.sendForm(
-      //     process.env.NEXT_SERVICE_ID ?? "",
-      //     process.env.NEXT_TEMPLATE_ID ?? "",
-      //     "#contact-form",
-      //     process.env.NEXT_KEY_ID ?? ""
-      //   );
+      const response = await emailjs.sendForm(
+        process.env.NEXT_SERVICE_ID ?? "",
+        process.env.NEXT_TEMPLATE_ID ?? "",
+        "#contact-form",
+        process.env.NEXT_KEY_ID ?? ""
+      );
       reset();
       setIsSending(false);
 
