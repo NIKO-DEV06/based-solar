@@ -1,7 +1,7 @@
 export const dictionary: any = {
   en: {
-    homeNav: "For Homes",
-    businessNav: "For Busniess",
+    homeNav: "For Houses",
+    businessNav: "For Businesses",
     projectsNav: "Projects",
     contactNav: "Contact",
     homeHeader: "Home",
@@ -32,9 +32,9 @@ export const dictionary: any = {
     forAssociation: "For Housing Associations",
     forAssociationP:
       "Our solutions for housing associations focus on sustainable, community-centric initiatives to enhance the well-being of residents.",
-    gurantee: "30 Years Guarantee",
+    gurantee: "25 Years Guarantee",
     guranteeP:
-      "With a solid 30-year guarantee, our products and services are built to last, providing you with long-term peace of mind and satisfaction.",
+      "With a solid 25-year guarantee, our products and services are built to last, providing you with long-term peace of mind and satisfaction.",
     demand: "Demand Response",
     demandP:
       "Our demand response solutions empower you to manage and optimize energy usage, ensuring efficiency and cost-effectiveness in real-time.",
