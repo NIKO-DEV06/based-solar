@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import { ThemeProvider } from "@/MT";
+import Script from "next/script";
 
 import "./globals.css";
 import Header from "@/components/shared/Header";
@@ -27,6 +28,7 @@ export default function RootLayout({
       <ThemeProvider>
         <AppProvider>
           <body>
+            <Script src="//cdn.cookie-script.com/s/fc85caa6135ee89d33a8a1101e4a9a17.js" />
             <Header />
             <main className={`${nunito_sans.className} scroll-smooth`}>
               {children}
