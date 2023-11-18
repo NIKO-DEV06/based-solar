@@ -13,6 +13,7 @@ import { useAppContext } from "@/context/AppContext";
 import { dictionary } from "@/content";
 
 const GetAQuote = () => {
+  // jbejd
   const [isSending, setIsSending] = useState(false);
   const { state } = useAppContext();
 
