@@ -1,7 +1,7 @@
 export const dictionary: any = {
   en: {
     homeNav: "For Houses",
-    businessNav: "For Businesses",
+    businessNav: "For Business",
     projectsNav: "Projects",
     contactNav: "Contact",
     homeHeader: "Home",
@@ -96,7 +96,7 @@ export const dictionary: any = {
   },
   bg: {
     homeNav: "За домове",
-    businessNav: "За бизнеси",
+    businessNav: "За бизнес",
     projectsNav: "Проекти",
     contactNav: "Контакти",
     homeHeader: "Home",
