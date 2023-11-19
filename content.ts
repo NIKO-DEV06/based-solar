@@ -93,6 +93,43 @@ export const dictionary: any = {
     lowMaintenanceCostsTitle: "Low Maintenance Costs",
     lowMaintenanceCostsDesc:
       "Solar power systems generally have low maintenance costs. Regular cleaning and occasional checks are usually sufficient to keep the system running efficiently. This contributes to the overall cost-effectiveness of residential solar power installations.",
+    lastUpdate: "Last Updated On",
+    effectiveDate: "Effective Date",
+    privacyp1:
+      " This Privacy Policy describes the policies of Based Solar, Bulgaria Sofia, Sofia 1000, Bulgaria, email: contact@basedsolar.com, phone: +359 877118393 on the collection, use and disclosure of your information that we collect when you use our website ( https://basedsolar.com ). (the “Service”). By accessing or using the Service, you are consenting to the collection, use and disclosure of your information in accordance with this Privacy Policy. If you do not consent to the same, please do not access or use the Service.",
+    privacyp2:
+      " We may modify this Privacy Policy at any time without any prior notice to you and will post the revised Privacy Policy on the Service. The revised Policy will be effective 180 days from when the revised Policy is posted in the Service and your continued access or use of the Service after such time will constitute your acceptance of the revised Privacy Policy. We therefore recommend that you periodically review this page.",
+    infoWeCollect: "Information We Collect:",
+    infoWeCollectP:
+      "We will collect and process the following personal information about you:",
+    name: "Name",
+    email: "Email",
+    mobile: "Mobile",
+    howInfo: "How We Use Your Information:",
+    howInfo2:
+      "We will use the information that we collect about you for the following purposes:",
+    howInfo3: "Customer feedback collection",
+    howInfo4: "Manage customer order",
+    howInfo5:
+      " If we want to use your information for any other purpose, we will ask you for consent and will use your information only on receiving your consent and then, only for the purpose(s) for which grant consent unless we are required to do otherwise by law.",
+    retention: "Retention Of Your Information:",
+    retentionP:
+      " We will retain your personal information with us for 90 days to 2 years after users terminate their accounts or for as long as we need it to fulfill the purposes for which it was collected as detailed in this Privacy Policy. We may need to retain certain information for longer periods such as record-keeping / reporting in accordance with applicable law or for other legitimate reasons like enforcement of legal rights, fraud prevention, etc. Residual anonymous information and aggregate information, neither of which identifies you (directly or indirectly), may be stored indefinitely.",
+    yourRights: "Your Rights:",
+    yourRightsP:
+      " Depending on the law that applies, you may have a right to access and rectify or erase your personal data or receive a copy of your personal data, restrict or object to the active processing of your data, ask us to share (port) your personal information to another entity, withdraw any consent you provided to us to process your data, a right to lodge a complaint with a statutory authority and such other rights as may be relevant under applicable laws. To exercise these rights, you can write to us at contact@basedsolar.com. We will respond to your request in accordance with applicable law.",
+    yourRightsP2:
+      " Do note that if you do not allow us to collect or process the required personal information or withdraw the consent to process the same for the required purposes, you may not be able to access or use the services for which your information was sought.",
+    cookies: "Cookies Etc.",
+    cookiesP:
+      " To learn more about how we use these and your choices in relation to these tracking technologies, please refer to our",
+    cookiePolicy: "Cookie Policy.",
+    security: "Security:",
+    securityP:
+      " The security of your information is important to us and we will use reasonable security measures to prevent the loss, misuse or unauthorized alteration of your information under our control. However, given the inherent risks, we cannot guarantee absolute security and consequently, we cannot ensure or warrant the security of any information you transmit to us and you do so at your own risk.",
+    dpo: "Grievance / Data Protection Officer:",
+    dpoP: " If you have any queries or concerns about the processing of your information that is available with us, you may email our Grievance Officer at Based Solar, Bulgaria, Sofia, email: contact@basedsolar.com. We will address your concerns in accordance with applicable law.",
+    policyGenerate: "Privacy Policy generated with",
   },
   bg: {
     homeNav: "За домове",
@@ -189,5 +226,42 @@ export const dictionary: any = {
     lowMaintenanceCostsTitle: "Ниски разходи за поддръжка",
     lowMaintenanceCostsDesc:
       "Слънчевите енергийни системи обикновено имат ниски разходи за поддръжка. Редовното почистване и периодичните проверки обикновено са достатъчни, за да поддържате системата работеща ефективно. Това допринася за общата рентабилност на жилищните слънчеви енергийни инсталации.",
+    lastUpdate: "Последна актуализация на",
+    effectiveDate: "Дата на влизане в сила",
+    privacyp1:
+      "Тази политика за поверителност описва политиките на Based Solar, България, София, София 1000, България, имейл: contact@basedsolar.com, телефон: +359 877118393 относно събирането, използването и разкриването на вашата информация, която ние събираме, когато използвате нашия уебсайт (https://basedsolar.com). („Услугата“). С достъпа или използването на Услугата вие се съгласявате със събирането, използването и разкриването на вашата информация в съответствие с тази Политика за поверителност. Ако не се съгласявате с това, моля, не получавайте достъп или не използвайте Услугата.",
+    privacyp2:
+      "Можем да променяме тази Политика за поверителност по всяко време без предварително уведомление и ще публикуваме преработената Политика за поверителност в Услугата. Преработената политика ще бъде валидна 180 дни след като бъде публикувана в Услугата и продължаването ви на достъпа или използването на Услугата след този момент ще представлява вашия прием на преработената Политика за поверителност. Следователно препоръчваме периодично да преглеждате тази страница.",
+    infoWeCollect: "Информация, която събираме:",
+    infoWeCollectP:
+      "Ще събираме и обработваме следната лична информация за вас:",
+    name: "Име",
+    email: "Имейл",
+    mobile: "Мобилен",
+    howInfo: "Как използваме вашата информация:",
+    howInfo2:
+      "Използваме информацията, която събираме за вас, за следните цели:",
+    howInfo3: "Събиране на обратна връзка от клиентите",
+    howInfo4: "Управление на клиентски поръчки",
+    howInfo5:
+      " Ако искаме да използваме вашата информация за каквато и да е друга цел, ще ви помолим за съгласие и ще използваме вашата информация само след получаване на вашето съгласие и след това само за целите, за които сте дали съгласието си, освен ако не сме задължени да постъпим по друг начин от закона.",
+    retention: "Съхранение на вашата информация:",
+    retentionP:
+      "Ще съхраняваме вашата лична информация при нас за период от 90 дни до 2 години след прекратяване на акаунтите на потребителите или докато сме я нужда за изпълнение на целите, за които беше събрана, както е посочено в тази Политика за поверителност. Може да е необходимо да задържим определена информация за по-дълги периоди, като например съхранение на записи / доклади в съответствие с приложимите закони или по други законни причини като упражняване на правни права, предотвратяване на измама и др. Следователно могат да бъдат съхранявани дългоанонимна информация и обобщена информация, която не ви идентифицира (пряко или непряко), може да бъде съхранявана временно.",
+    yourRights: "Вашите права:",
+    yourRightsP:
+      "В зависимост от приложимия закон може да имате право на достъп и коригиране или изтриване на вашите лични данни или получаване на копие на вашите лични данни, ограничаване или възражаване срещу активната обработка на данните ви, да ни поискате да споделим (пренесем) вашата лична информация на друга организация, оттеглите всяко съгласие, което сте предоставили за обработка на вашите данни, право на жалба пред компетентен орган и такива други права, които могат да бъдат релевантни в съответствие с приложимите закони. За упражняване на тези права можете да ни пишете на contact@basedsolar.com. Ще отговорим на вашата заявка в съответствие с приложимия закон.",
+    yourRightsP2:
+      " Моля, обърнете внимание, че ако не ни позволите да събираме или обработваме необходимата лична информация или оттеглите съгласието си за обработка на същата за необходимите цели, може да не можете да получите достъп или да използвате услугите, за които беше търсена вашата информация.",
+    cookies: "Бисквитки и др.",
+    cookiesP:
+      " За да научите повече за това как използваме тези и вашите избори относно тези технологии за проследяване, моля, обърнете се към нашата",
+    cookiePolicy: "Политика за бисквитки.",
+    security: "Сигурност:",
+    securityP:
+      " Сигурността на вашата информация е важна за нас и ще използваме разумни мерки за сигурност, за да предотвратим загубата, злоупотребата или неоторизираната промяна на вашата информация под наш контрол. Въпреки това, при наличието на вътрешни рискове не можем да гарантираме абсолютна сигурност и следователно не можем да осигурим или гарантираме сигурността на всяка информация, която предавате на нас, и го правите на свой риск.",
+    dpo: "Жалба / Офицер по защита на данните:",
+    dpoP: " Ако имате някакви въпроси или опасения относно обработката на вашата информация, която е налична при нас, можете да изпратите имейл на нашия Офицер по жалби в Based Solar, България, София, имейл: contact@basedsolar.com. Ще се занимаем с вашите притеснения в съответствие с приложимия закон.",
+    policyGenerate: "Политика за поверителност генерирана с",
   },
 };
